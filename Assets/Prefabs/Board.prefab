@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1168909189136670}
+  m_IsPrefabAsset: 1
+--- !u!1 &1168909189136670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4773845829323356}
+  - component: {fileID: 114839770090714812}
+  m_Layer: 0
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1508640194891678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4141270419378828}
+  - component: {fileID: 114926217304707428}
+  m_Layer: 0
+  m_Name: PathDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4141270419378828
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1508640194891678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.17, y: -0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4773845829323356}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4773845829323356
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168909189136670}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.86, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4141270419378828}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114839770090714812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168909189136670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3c27e12ea338d448816e0fcf64f84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualSpacing: 1
+  nodePrefab: {fileID: 1782853469812454, guid: ee72de72040dafa46991dd37e64d5465, type: 2}
+  connectionPrefab: {fileID: 1572752829537254, guid: 3eed003086488fe489173b23cae54309,
+    type: 2}
+  markedNodeColor: {r: 1, g: 0, b: 0, a: 1}
+  scoreText: {fileID: 0}
+  timerObject: {fileID: 0}
+  TimeUpCanvas: {fileID: 0}
+  highScoreCanvas: {fileID: 0}
+  animatedStarPrefab: {fileID: 1572302558859928, guid: 65cea22c307279f47b0ff19b398eea3a,
+    type: 2}
+  yesOrNoPrefab: {fileID: 1928921115293806, guid: 604a08050a45693409bf38d2a88523ae,
+    type: 2}
+  yesSprite: {fileID: 21300002, guid: 122873c9ebf9a9e43b22d005d78f8465, type: 3}
+  noSprite: {fileID: 21300000, guid: 122873c9ebf9a9e43b22d005d78f8465, type: 3}
+  yesSoundClip: {fileID: 8300000, guid: b3fe0906365acf141bb1c0cee534d520, type: 3}
+  noSoundClip: {fileID: 8300000, guid: e3dadc03444ad0b4f81b4627896bf939, type: 3}
+  gameEndSound: {fileID: 8300000, guid: cff0f72cc9d0ada4ba618f87ead9e30d, type: 3}
+  highScoreSound: {fileID: 8300000, guid: d55f5fe406fe6834588b21691329987b, type: 3}
+  audioSourceObject: {fileID: 0}
+--- !u!114 &114926217304707428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1508640194891678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e6b59d732304b42ba5992a9b4e77e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalSpacing: 1.5
+  horizontalSpacing: 1.5
+  columnSize: 6
+  upSprite: {fileID: 21300004, guid: 38095b6db3777774983fc7c392a92f05, type: 3}
+  downSprite: {fileID: 21300000, guid: 38095b6db3777774983fc7c392a92f05, type: 3}
+  leftSprite: {fileID: 21300006, guid: 38095b6db3777774983fc7c392a92f05, type: 3}
+  rightSprite: {fileID: 21300002, guid: 38095b6db3777774983fc7c392a92f05, type: 3}
+  directionShowPrefab: {fileID: 1374187142395998, guid: e1f82c70758e06b45bcb0ed2c183507b,
+    type: 2}
+  maxChildren: 20
